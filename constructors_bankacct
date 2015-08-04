@@ -1,0 +1,16 @@
+function BankAccount(name, deposit, savAmt){
+  this.acctHolder = name;
+  this.checkingAcct = deposit;
+  this.savingsAcct = savAmt;
+  this.checkBalance = function(deposit){
+    this.checkingAcct += deposit; 
+    };
+} 
+
+var nicAcct = new BankAccount ("nic", 100, 400);
+nicAcct.checkBalance(800); 
+console.log(nicAcct);
+
+var nancyAcct = new BankAccount('nancy', 100, 1000);
+nancyAcct.checkBalance(1000);
+console.log(nancyAcct); 
